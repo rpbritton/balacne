@@ -62,9 +62,9 @@ xkb_symbols "balacne" {
     key <AC05> {          [ period,                  exclam,                  NoSymbol,                NoSymbol,                NoSymbol,                NoSymbol,                period,                  period                   ] };
 
     key <AC08> {          [ b,                       B,                       NoSymbol,                NoSymbol,                NoSymbol,                NoSymbol,                percent,                 percent                  ] };
-    key <AC09> {          [ f,                       F,                       NoSymbol,                NoSymbol,                7,                       7,                       backslash,               backslash                ] };
-    key <AC10> {          [ g,                       G,                       NoSymbol,                NoSymbol,                8,                       8,                       asciitilde,              asciitilde               ] };
-    key <AC11> {          [ v,                       V,                       NoSymbol,                NoSymbol,                9,                       9,                       numbersign,              numbersign               ] };
+    key <AC09> {          [ f,                       F,                       Return,                  Return,                  7,                       7,                       backslash,               backslash                ] };
+    key <AC10> {          [ g,                       G,                       Escape,                  Escape,                  8,                       8,                       asciitilde,              asciitilde               ] };
+    key <AC11> {          [ v,                       V,                       Tab,                     Tab,                     9,                       9,                       numbersign,              numbersign               ] };
     key <RTRN> {          [ x,                       X,                       NoSymbol,                NoSymbol,                NoSymbol,                NoSymbol,                at,                      at                       ] };
 
     // Thumb keys
@@ -73,11 +73,10 @@ xkb_symbols "balacne" {
 
     // Left
     key <AB02> {
-        symbols[Group1] = [ ISO_Level3_Latch         ]
+        symbols[Group1] = [ Hyper_L                  ]
     };
     key <AB03> {
-        symbols[Group1] = [ ISO_Level3_Shift         ],
-        actions[Group1] = [ SetMods(mods=LevelThree) ]
+        symbols[Group1] = [ ISO_Level3_Shift         ]
     };
     key <AB04> {
         type[Group1]    = "EIGHT_LEVEL_LEVEL_FIVE_LOCK",
@@ -86,16 +85,13 @@ xkb_symbols "balacne" {
 
     // Right
     key <AB08> {
-        type[Group1]    = "EIGHT_LEVEL_LEVEL_FIVE_LOCK",
-        symbols[Group1] = [ Shift_R,                 Shift_R,                 Return,                  Return,                  Shift_R,                 Shift_R,                 Shift_R,                 Shift_R                 ],
-        actions[Group1] = [ LatchMods(mods=Shift),   LatchMods(mods=Shift),   NoAction(),              NoAction(),              LatchMods(mods=Shift),   LatchMods(mods=Shift),   LatchMods(mods=Shift),   LatchMods(mods=Shift)   ]
+        symbols[Group1] = [ Shift_R                  ]
     };
     key <AB09> {
-        symbols[Group1] = [ ISO_Level5_Shift         ],
-        actions[Group1] = [ SetMods(mods=LevelFive)  ]
+        symbols[Group1] = [ ISO_Level5_Shift         ]
     };
     key <AB10> {
-        symbols[Group1] = [ ISO_Level5_Latch         ],
+        symbols[Group1] = [ Hyper_R                  ],
         actions[Group1] = [ SetMods(mods=LevelThree+LevelFive) ]
     };
 
